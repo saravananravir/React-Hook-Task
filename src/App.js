@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import UseStateExample from './components/UseStateExample';
+import UseEffectExample from './components/UseEffectExample';
+import UseContextExample from './components/UseContextExample';
+import UseReducerExample from './components/UseReducerExample';
+import UseRefExample from './components/UseRefExample';
+// src/App.js
+// import React from 'react';
+import { ThemeProvider } from '../ThemeContext'; // Ensure this is correctly imported
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <h1>React Hooks Practice</h1>
+        <UseStateExample />
+        <hr />
+        <UseEffectExample />
+        <hr />
+        <UseContextExample />
+        <hr />
+        <UseReducerExample />
+        <hr />
+        <UseRefExample />
+      </div>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
